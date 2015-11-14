@@ -12,11 +12,12 @@
 
   <tbody>
     <tr>
-    <% @articles.each do |article| %>
-
-      <%= render "article" ,:article => article %>    
-      <br>
-    <% end %>
+    <div id=articles>
+     <% @articles.each do |article| %>
+       <%= render "article" ,:article => article %>    
+       <br>
+     <% end %>
+    </div>
     </tr>
   </tbody>
 </table>
