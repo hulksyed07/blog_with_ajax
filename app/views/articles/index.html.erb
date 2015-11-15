@@ -14,8 +14,10 @@
     <tr>
     <div id=articles>
      <% @articles.each do |article| %>
+      <div id= edit_article_<%=article.id%>>
        <%= render "article" ,:article => article %>    
        <br>
+      </div>
      <% end %>
     </div>
     </tr>
