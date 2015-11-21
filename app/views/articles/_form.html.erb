@@ -22,6 +22,8 @@
     <%= f.text_area :description , :id => "description",:class => "tinymce" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit style: "width: 162px;"%>
   </div>
 <% end %>
+
+<%= button_to 'New Article', new_article_path ,id: "new_link" ,method: "get",style: "width: 162px;"%>

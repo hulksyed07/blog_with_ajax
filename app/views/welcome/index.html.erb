@@ -1,0 +1,39 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<!-- <%= link_to 'New Product', new_product_path ,id: "new_link_1",remote: true %> -->
+<!-- <%= link_to 'New Article', new_article_path ,id: "new_link",remote: true %> -->
+
+<button type="button" id= "btnP">Products_button</button>
+<button type="button" id= "btnA">Articles_button</button>
+
+
+<div class= "forms">
+
+	<div id="produts_form">
+	  <%= render 'products/form' %>
+	</div>
+
+	<div id= "articles_form"
+	  <%= render 'articles/form' %>
+	</div>
+
+</div>
+
+<script>
+
+  $(document).ready(function(){
+  	$("#articles_form").hide();
+  });
+  $(function(){
+    $("#btnP").on('click',function(){
+    	$("#articles_form").hide();
+    	$("#produts_form").show();
+    });
+    $("#btnA").on('click',function(){
+    	$("#produts_form").hide();
+    	$("#articles_form").show();
+    });
+  });
+</script>

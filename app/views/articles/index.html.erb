@@ -27,3 +27,30 @@
 <br>
 
 <%= link_to 'New Article', new_article_path ,id: "new_link",remote: true %>
+<%= button_to 'New Article', new_article_path ,id: "new_link" ,method: "get" %>
+<!-- button_to(name = nil, options = nil, html_options = nil, &block) public -->
+<!-- Options
+
+The options hash accepts the same options as url_for.
+
+There are a few special html_options:
+
+:method - Symbol of HTTP verb. Supported verbs are :post, :get, :delete, :patch, and :put. By default it will be :post.
+
+:disabled - If set to true, it will generate a disabled button.
+
+:data - This option can be used to add custom data attributes.
+
+:remote - If set to true, will allow the Unobtrusive JavaScript drivers to control the submit behavior. By default this behavior is an ajax submit.
+
+:form - This hash will be form attributes
+
+:form_class - This controls the class of the form within which the submit button will be placed
+
+:params - Hash of parameters to be rendered as hidden fields within the form.
+
+Data attributes
+
+:confirm - This will use the unobtrusive JavaScript driver to prompt with the question specified. If the user accepts, the link is processed normally, otherwise no action is taken.
+
+:disable_with - Value of this parameter will be used as the value for a disabled version of the submit button when the form is submitted. This feature is provided by the unobtrusive JavaScript driver. -->
